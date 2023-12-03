@@ -4,6 +4,8 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
+
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -57,7 +59,7 @@ playground.xcworkspace
 # Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+*.xcworkspace
 
 # Carthage
 #
@@ -76,6 +78,11 @@ Dependencies/
 # Instead, use fastlane to re-generate the screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
 fastlane/report.xml
 fastlane/Preview.html
