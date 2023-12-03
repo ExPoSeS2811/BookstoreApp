@@ -12,6 +12,7 @@
 		CAC4DD5E2B1CA3D00051A325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */; };
 		CAC4DD612B1CA3D00051A325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5F2B1CA3D00051A325 /* LaunchScreen.storyboard */; };
 		CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */; };
+		CAEBC9682B1CFE9D00C68B53 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC9672B1CFE9C00C68B53 /* BookInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CAC4DD602B1CA3D00051A325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAC4DD622B1CA3D00051A325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CAEBC9672B1CFE9C00C68B53 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */,
 				CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */,
 				CAC4DD582B1CA3CE0051A325 /* ViewController.swift */,
+				CAEBC9672B1CFE9C00C68B53 /* BookInfoViewController.swift */,
 				CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */,
 				CAC4DD5F2B1CA3D00051A325 /* LaunchScreen.storyboard */,
 				CAC4DD622B1CA3D00051A325 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAC4DD592B1CA3CE0051A325 /* ViewController.swift in Sources */,
+				CAEBC9682B1CFE9D00C68B53 /* BookInfoViewController.swift in Sources */,
 				CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */,
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
 			);
