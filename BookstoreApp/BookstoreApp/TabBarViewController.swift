@@ -46,15 +46,13 @@ class TabBarController: UITabBarController {
         image: UIImage?
     ) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
-        
         navigationController.tabBarItem.title = title
         if let image = image {
             navigationController.tabBarItem.image = image
         }
         navigationController.navigationBar.prefersLargeTitles = true
-
         rootViewController.navigationItem.title = title
-        
+
         return navigationController
     }
     
