@@ -11,6 +11,7 @@
 		1E0EE6562B1E25F10051C19C /* UIVIew - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE6552B1E25F10051C19C /* UIVIew - Extension.swift */; };
 		1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE6592B1E2E5B0051C19C /* UIStackView - Extension.swift */; };
 		1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE65B2B1E2E800051C19C /* UIButton - Extension.swift */; };
+		1E0EE65E2B1E3A620051C19C /* UILabel - Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE65D2B1E3A620051C19C /* UILabel - Extesion.swift */; };
 		CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */; };
 		CAC4DD592B1CA3CE0051A325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD582B1CA3CE0051A325 /* ViewController.swift */; };
 		CAC4DD5E2B1CA3D00051A325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		1E0EE6552B1E25F10051C19C /* UIVIew - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew - Extension.swift"; sourceTree = "<group>"; };
 		1E0EE6592B1E2E5B0051C19C /* UIStackView - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView - Extension.swift"; sourceTree = "<group>"; };
 		1E0EE65B2B1E2E800051C19C /* UIButton - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton - Extension.swift"; sourceTree = "<group>"; };
+		1E0EE65D2B1E3A620051C19C /* UILabel - Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel - Extesion.swift"; sourceTree = "<group>"; };
 		CAC4DD512B1CA3CE0051A325 /* BookstoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookstoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAC4DD582B1CA3CE0051A325 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */,
 				CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */,
 				1E0EE6532B1E213E0051C19C /* ScreenProductViewController.swift */,
+				1E0EE65D2B1E3A620051C19C /* UILabel - Extesion.swift */,
 				1E0EE6592B1E2E5B0051C19C /* UIStackView - Extension.swift */,
 				1E0EE65B2B1E2E800051C19C /* UIButton - Extension.swift */,
 				1E0EE6552B1E25F10051C19C /* UIVIew - Extension.swift */,
@@ -104,7 +107,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CAC4DD502B1CA3CE0051A325 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -151,6 +154,7 @@
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,
 				CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */,
 				1E0EE6562B1E25F10051C19C /* UIVIew - Extension.swift in Sources */,
+				1E0EE65E2B1E3A620051C19C /* UILabel - Extesion.swift in Sources */,
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
 				1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */,
 			);
@@ -206,6 +210,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,6 +271,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -298,7 +304,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +332,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

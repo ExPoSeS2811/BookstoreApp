@@ -9,7 +9,7 @@ import UIKit
 
 extension UIButton {
     
-    convenience init(title: String? = nil, titleColor: UIColor? = nil, backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = 0, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, image: String? = nil, fontSize: CGFloat? = nil, font: String? = nil) {
+    convenience init(title: String? = nil, titleColor: UIColor? = nil, backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = 0, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, image: String? = nil, font: UIFont? = nil) {
         self.init(type: .system)
         self.frame = .infinite
         self.tintColor = .white
@@ -43,12 +43,8 @@ extension UIButton {
             self.setImage(uiImage, for: .normal)
         }
         
-        if let fontSize = fontSize {
-            self.titleLabel?.font = UIFont(name: "", size: fontSize)
-        }
-        
         if let font = font {
-            self.titleLabel?.font = UIFont(name: font, size: fontSize!)
+            self.titleLabel?.font = font
         }
     }
 }
