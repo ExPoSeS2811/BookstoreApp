@@ -11,7 +11,6 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBar()
         setupViewControllers()
     }
     
@@ -54,12 +53,5 @@ class TabBarController: UITabBarController {
         rootViewController.navigationItem.title = title
 
         return navigationController
-    }
-    
-    private func setupTabBar() {
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        tabBar.scrollEdgeAppearance = appearance
-        view.tintColor = .black
     }
 }
