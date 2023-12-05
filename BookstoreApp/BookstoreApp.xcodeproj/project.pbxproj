@@ -20,6 +20,7 @@
 		CAC4DD612B1CA3D00051A325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5F2B1CA3D00051A325 /* LaunchScreen.storyboard */; };
 		CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */; };
 		CAEBC98C2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */; };
+		CAEBC98E2B1FD72000C68B53 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC98D2B1FD72000C68B53 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CAC4DD622B1CA3D00051A325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewLayout.swift; sourceTree = "<group>"; };
+		CAEBC98D2B1FD72000C68B53 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				1E0EE65F2B1E55DB0051C19C /* Extension */,
 				CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */,
 				CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */,
+				CAEBC98D2B1FD72000C68B53 /* TabBar.swift */,
 				1E0EE6532B1E213E0051C19C /* ScreenProductViewController.swift */,
 				7B1CBB3E2B1FB33F0008D8E1 /* ScreenCategoriesViewController */,
 				CAC4DD582B1CA3CE0051A325 /* HomeViewController.swift */,
@@ -177,6 +180,7 @@
 				1E0EE6542B1E213E0051C19C /* ScreenProductViewController.swift in Sources */,
 				CAC4DD592B1CA3CE0051A325 /* HomeViewController.swift in Sources */,
 				7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */,
+				CAEBC98E2B1FD72000C68B53 /* TabBar.swift in Sources */,
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,
 				CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */,
 				1E0EE6562B1E25F10051C19C /* UIVIew - Extension.swift in Sources */,

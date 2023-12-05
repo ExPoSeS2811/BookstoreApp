@@ -23,3 +23,14 @@ extension UIView {
         self.layer.shadowRadius = 4
     }
 }
+
+extension UIView {
+    static var safeAreaInset: UIEdgeInsets {
+        if #available(iOS 11.0, *), let keyWindow = UIApplication.shared.keyWindow {
+            return keyWindow.safeAreaInsets
+        } else {
+            // Возвращаем UIEdgeInsets.zero для устройств с iOS ниже 11.0
+            return UIEdgeInsets.zero
+        }
+    }
+}
