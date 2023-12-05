@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
                 image: UIImage(systemName: "house.fill")
             ),
             setupNavigationController(
-                rootViewController: HomeViewController(),
+                rootViewController: ScreenCategoriesViewController(),
                 title: "Categories",
                 image: UIImage(systemName: "circle.grid.3x3.fill")
             ),

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScreenCategoriesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ScreenCategoriesViewController: UIViewController {
 
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -41,6 +41,7 @@ class ScreenCategoriesViewController: UIViewController, UICollectionViewDataSour
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
 
@@ -59,66 +60,84 @@ class ScreenCategoriesViewController: UIViewController, UICollectionViewDataSour
         NSLayoutConstraint.activate([
             // Констрейнты для stackView
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            stackView.heightAnchor.constraint(equalToConstant: 50),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.stackViewHorizontalPadding),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.stackViewHorizontalPadding),
+            stackView.heightAnchor.constraint(equalToConstant: Constants.stackViewHeight),
 
             // Констрейнты для collectionView
-            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50)
+            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: Constants.collectionViewTopPadding),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.collectionViewHorizontalPadding),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.collectionViewHorizontalPadding),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Constants.collectionViewBottomPadding)
         ])
 
         filterButton.addTarget(self, action: #selector(filterButtonTapped), for: .touchUpInside)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "customCell")
-        
-        // Добавляем TabBarController в качестве дочернего контроллера
-        let tabBarController = TabBarController()
-        addChild(tabBarController)
-        view.addSubview(tabBarController.view)
-        tabBarController.didMove(toParent: self)
-        
-        // Констрейнты для TabBarController
-        tabBarController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tabBarController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tabBarController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tabBarController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-        ])
-        
-    }
-
-    // MARK: - UICollectionViewDataSource
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20 // Количество ячеек
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
-        cell.configure(with: "Текст \(indexPath.item + 1)")
-
-        return cell
-    }
-
-    // MARK: - UICollectionViewDelegateFlowLayout
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = CGFloat(150)
-        let cellHeight = CGFloat(100)
-        return CGSize(width: cellWidth, height: cellHeight)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
     }
 
     // MARK: - Button Action
 
     @objc private func filterButtonTapped() {
         print("Filter button tapped!")
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension ScreenCategoriesViewController: UICollectionViewDataSource {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return 20 // Количество ячеек
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as? CategoryCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: "Текст \(indexPath.item + 1)")
+
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension ScreenCategoriesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        return CGSize(width: Constants.cellWidth, height: Constants.cellHeight)
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+    ) -> CGFloat {
+        return 30
+    }
+}
+
+extension ScreenCategoriesViewController {
+    private enum Constants {
+        static let cellIdentifier = "categoryCell"
+        
+        static let cellWidth: CGFloat = 150.0
+        static let cellHeight: CGFloat = 100.0
+        
+        static let stackViewHorizontalPadding: CGFloat = 10.0
+        static let stackViewHeight: CGFloat = 50.0
+        
+        static let collectionViewTopPadding: CGFloat = 10.0
+        static let collectionViewHorizontalPadding: CGFloat = 20.0
+        static let collectionViewBottomPadding: CGFloat = 50.0
     }
 }
