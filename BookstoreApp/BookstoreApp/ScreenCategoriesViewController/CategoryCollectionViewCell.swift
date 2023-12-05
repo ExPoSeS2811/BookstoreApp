@@ -29,6 +29,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     private func setupCell() {
         addSubview(label)
+        
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = Constants.cornerRadius
 
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: topAnchor),
@@ -40,5 +43,11 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     func configure(with text: String) {
         label.text = text
+    }
+}
+
+extension CategoryCollectionViewCell {
+    struct Constants {
+        static let cornerRadius: CGFloat = 24
     }
 }
