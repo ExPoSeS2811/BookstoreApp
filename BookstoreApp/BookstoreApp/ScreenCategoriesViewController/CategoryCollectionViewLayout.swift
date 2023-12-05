@@ -38,8 +38,9 @@ class CategoryCollectionViewLayout: UICollectionViewFlowLayout {
         
         for item in 0..<collectionView.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: item, section: 0)
-            
-            let height = cellPadding * 2 + possibleHeights.randomElement()!
+            if let randomPossibleHeight = possibleHeights.randomElement() {
+                let height = cellPadding * 2 + randomPossibleHeight
+            }
             let frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: columnWidth, height: CGFloat(height))
             let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
             
