@@ -19,6 +19,7 @@
 		CAC4DD5E2B1CA3D00051A325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */; };
 		CAC4DD612B1CA3D00051A325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4DD5F2B1CA3D00051A325 /* LaunchScreen.storyboard */; };
 		CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */; };
+		CAEBC98C2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CAC4DD602B1CA3D00051A325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAC4DD622B1CA3D00051A325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */,
 				7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */,
+				CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */,
 			);
 			path = ScreenCategoriesViewController;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
 				7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */,
 				1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */,
+				CAEBC98C2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

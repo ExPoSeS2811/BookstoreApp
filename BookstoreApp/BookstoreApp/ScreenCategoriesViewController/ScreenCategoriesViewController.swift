@@ -34,7 +34,7 @@ class ScreenCategoriesViewController: UIViewController {
     }()
 
     let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = CategoryCollectionViewLayout()
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 20
 
