@@ -49,7 +49,7 @@ class ScreenCategoriesViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        title = "Категории"
+        title = "Categories"
 
         stackView.addArrangedSubview(searchBar)
         stackView.addArrangedSubview(filterButton)

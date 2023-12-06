@@ -12,6 +12,9 @@
 		1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE6592B1E2E5B0051C19C /* UIStackView - Extension.swift */; };
 		1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE65B2B1E2E800051C19C /* UIButton - Extension.swift */; };
 		1E0EE65E2B1E3A620051C19C /* UILabel - Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EE65D2B1E3A620051C19C /* UILabel - Extension.swift */; };
+		404605F92B20602900004BFB /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605F82B20602900004BFB /* HomeCollectionViewCell.swift */; };
+		404605FC2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605FB2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift */; };
+		404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605FD2B2106D300004BFB /* TapBarItems.swift */; };
 		7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */; };
 		7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */; };
 		CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 		1E0EE6592B1E2E5B0051C19C /* UIStackView - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView - Extension.swift"; sourceTree = "<group>"; };
 		1E0EE65B2B1E2E800051C19C /* UIButton - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton - Extension.swift"; sourceTree = "<group>"; };
 		1E0EE65D2B1E3A620051C19C /* UILabel - Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel - Extension.swift"; sourceTree = "<group>"; };
+		404605F82B20602900004BFB /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		404605FB2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		404605FD2B2106D300004BFB /* TapBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarItems.swift; sourceTree = "<group>"; };
 		7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCategoriesViewController.swift; sourceTree = "<group>"; };
 		CAC4DD512B1CA3CE0051A325 /* BookstoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookstoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +103,11 @@
 				CAC4DD542B1CA3CE0051A325 /* AppDelegate.swift */,
 				CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */,
 				CAEBC98D2B1FD72000C68B53 /* TabBar.swift */,
+				404605FD2B2106D300004BFB /* TapBarItems.swift */,
 				1E0EE6532B1E213E0051C19C /* ScreenProductViewController.swift */,
 				7B1CBB3E2B1FB33F0008D8E1 /* ScreenCategoriesViewController */,
+				404605FB2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift */,
+				404605F82B20602900004BFB /* HomeCollectionViewCell.swift */,
 				CAC4DD582B1CA3CE0051A325 /* HomeViewController.swift */,
 				CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */,
 				CAC4DD5F2B1CA3D00051A325 /* LaunchScreen.storyboard */,
@@ -182,12 +191,15 @@
 				7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */,
 				CAEBC98E2B1FD72000C68B53 /* TabBar.swift in Sources */,
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,
+				404605F92B20602900004BFB /* HomeCollectionViewCell.swift in Sources */,
 				CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */,
+				404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */,
 				1E0EE6562B1E25F10051C19C /* UIVIew - Extension.swift in Sources */,
 				1E0EE65E2B1E3A620051C19C /* UILabel - Extension.swift in Sources */,
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
 				7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */,
 				1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */,
+				404605FC2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift in Sources */,
 				CAEBC98C2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
