@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  BookstoreApp
-//
-//  Created by Gleb Rasskazov on 03.12.2023.
-//
-
 import UIKit
 
 @main
@@ -16,12 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         if let window {
-            let tabBarController = TabBarController()
-            tabBarController.setValue(TabBar(), forKey: "tabBar")
+            let tapBar = TabBar()      
+            let tabBarController = TabBarController(tabBar: tapBar)
+            tabBarController.setupViewControllers()
             window.rootViewController = tabBarController
             window.makeKeyAndVisible()
         }
-        
         return true
     }
 }

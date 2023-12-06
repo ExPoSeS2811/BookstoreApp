@@ -1,57 +1,33 @@
-//
-//  TabBarViewController.swift
-//  BookstoreApp
-//
-//  Created by Gleb Rasskazov on 03.12.2023.
-//
-
 import UIKit
 
 class TabBarController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewControllers()
+        selectedIndex = 0
     }
     
-    private func setupViewControllers() {
-        viewControllers = [
-            setupNavigationController(
-                rootViewController: HomeViewController(),
-                title: "Home",
-                image: UIImage(systemName: "house.fill")
-            ),
-            setupNavigationController(
-                rootViewController: ScreenCategoriesViewController(),
-                title: "Categories",
-                image: UIImage(systemName: "circle.grid.3x3.fill")
-            ),
-            setupNavigationController(
-                rootViewController: HomeViewController(),
-                title: "Likes",
-                image: UIImage(systemName: "heart.fill")
-            ),
-            setupNavigationController(
-                rootViewController: HomeViewController(),
-                title: "Account",
-                image: UIImage(systemName: "person.crop.circle.fill")
-            )
+    init(tabBar: UITabBar) {
+        super.init(nibName: nil, bundle: nil)
+        self.setValue(tabBar, forKey: "tabBar")
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViewControllers() {
+        self.viewControllers = [
+            setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .house),
+            setupTabBarСontroller(vc: ScreenCategoriesViewController(), tabBarItems: .categories),
+            setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .likes),
+            setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .account)
         ]
     }
     
-    private func setupNavigationController(
-        rootViewController: UIViewController,
-        title: String,
-        image: UIImage?
-    ) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.tabBarItem.title = title
-        if let image = image {
-            navigationController.tabBarItem.image = image
-        }
-        navigationController.navigationBar.prefersLargeTitles = true
-        rootViewController.navigationItem.title = title
-
-        return navigationController
+    func setupTabBarСontroller(vc: UIViewController, tabBarItems: TabBarItems) -> UINavigationController{
+        let vc = UINavigationController(rootViewController: vc)
+        vc.navigationBar.prefersLargeTitles = true
+        vc.tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        return vc
     }
 }
