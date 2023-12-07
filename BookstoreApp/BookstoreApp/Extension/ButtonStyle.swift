@@ -9,18 +9,18 @@ import UIKit
 
 struct ButtonTextStyle {
     
-    static let defaultTextStyle = ButtonTextStyle.self
+    static let defaultTextStyle = ButtonTextStyle()
     
-    let title: String?
-    let titleColor: UIColor?
-    let font: UIFont?
+    var title: String?
+    var titleColor: UIColor?
+    var font: UIFont?
     
 }
 
 struct ButtonBackgroundStyle {
     
-    static let defaultBackgroundStyle = ButtonBackgroundStyle.self
+    static let defaultBackgroundStyle = ButtonBackgroundStyle()
     
-    let backgroundColor: UIColor?
-    let cornerRadius: CGFloat?
+    var backgroundColor: UIColor?
+    var cornerRadius: CGFloat?
 }

@@ -9,28 +9,28 @@ import UIKit
 
 extension UIButton {
     
-    init(buttonTextStyle: ButtonTextStyle = .defaultTextStyle, buttonBackgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle) {
+    convenience init(textStyle: ButtonTextStyle = .defaultTextStyle, backgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle) {
         self.init(type: .system)
         self.frame = .infinite
         self.tintColor = .white
         
-        if let title = buttonTextStyle.title {
-            self.setTitle(buttonTextStyle.title, for: .normal)
+        if textStyle.title != nil {
+            self.setTitle(textStyle.title, for: .normal)
         }
         
-        if let titleColor = buttonTextStyle.titleColor {
+        if let titleColor = textStyle.titleColor {
             self.setTitleColor(titleColor, for: .normal)
         }
         
-        if let color = buttonBackgroundStyle.backgroundColor {
+        if let color = backgroundStyle.backgroundColor {
             self.backgroundColor = color
         }
         
-        if let radius = buttonBackgroundStyle.cornerRadius {
+        if let radius = backgroundStyle.cornerRadius {
             self.layer.cornerRadius = radius
         }
         
-        if let font = buttonTextStyle.font {
+        if let font = textStyle.font {
             self.titleLabel?.font = font
         }
     }

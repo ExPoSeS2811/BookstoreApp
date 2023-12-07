@@ -11,6 +11,7 @@ class ProductViewController: UIViewController {
 
     //MARK: - UI Elements
 
+    // Setup labels
     private lazy var bookNameLabel = UILabel(text: "The Picture of Dorian Gray", font: .boldSystemFont(ofSize: 24), textColor: .black)
     private lazy var descriptionLabel = UILabel(text: "Description:", font: .systemFont(ofSize: 14), textColor: .black)
     private lazy var authorLabel = CustomAttributedLabel(text: "Author: ", boldText: "Oscar Wilde")
@@ -32,9 +33,14 @@ class ProductViewController: UIViewController {
         stack.alignment = .leading
         return stack
     }()
-
-    private lazy var addToListbutton = UIButton(title: "Add to list", titleColor: .black, backgroundColor: .gray, cornerRadius: 4, font: .systemFont(ofSize: 14))
-    private lazy var readButton = UIButton(title: "Read", titleColor: .white, backgroundColor: .black, cornerRadius: 4, font: .systemFont(ofSize: 14))
+    
+    // Setup buttons
+    private lazy var addToListTextStyle = ButtonTextStyle(title: "Add to list", titleColor: .black, font: .systemFont(ofSize: 14))
+    private lazy var addToListBackgroundStyle = ButtonBackgroundStyle(backgroundColor: .gray, cornerRadius: 4)
+    private lazy var addToListbutton = UIButton(textStyle: addToListTextStyle, backgroundStyle: addToListBackgroundStyle)
+    private lazy var readButtonTextStyle = ButtonTextStyle(title: "Read", titleColor: .white, font: .systemFont(ofSize: 14))
+    private lazy var readButtonBackgroundStyle = ButtonBackgroundStyle(backgroundColor: .black, cornerRadius: 4)
+    private lazy var readButton = UIButton(textStyle: readButtonTextStyle, backgroundStyle: readButtonBackgroundStyle)
     
     private lazy var descriptionTextView: UITextView = {
         let textView = UITextView()
