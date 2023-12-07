@@ -9,41 +9,28 @@ import UIKit
 
 extension UIButton {
     
-    convenience init(title: String? = nil, titleColor: UIColor? = nil, backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = 0, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, image: String? = nil, font: UIFont? = nil) {
+    init(buttonTextStyle: ButtonTextStyle = .defaultTextStyle, buttonBackgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle) {
         self.init(type: .system)
         self.frame = .infinite
         self.tintColor = .white
         
-        if let title = title {
-            self.setTitle(title, for: .normal)
+        if let title = buttonTextStyle.title {
+            self.setTitle(buttonTextStyle.title, for: .normal)
         }
         
-        if let titleColor = titleColor {
+        if let titleColor = buttonTextStyle.titleColor {
             self.setTitleColor(titleColor, for: .normal)
         }
         
-        if let color = backgroundColor {
+        if let color = buttonBackgroundStyle.backgroundColor {
             self.backgroundColor = color
         }
         
-        if let radius = cornerRadius {
+        if let radius = buttonBackgroundStyle.cornerRadius {
             self.layer.cornerRadius = radius
         }
         
-        if let borderWidth = borderWidth {
-            self.layer.borderWidth = borderWidth
-        }
-        
-        if let borderColor = borderColor {
-            self.layer.borderColor = borderColor.cgColor
-        }
-        
-        if let image = image {
-            let uiImage = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
-            self.setImage(uiImage, for: .normal)
-        }
-        
-        if let font = font {
+        if let font = buttonTextStyle.font {
             self.titleLabel?.font = font
         }
     }

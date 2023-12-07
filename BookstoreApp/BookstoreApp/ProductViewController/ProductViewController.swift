@@ -1,5 +1,5 @@
 //
-//  ScreenProductViewController.swift
+//  ProductViewController.swift
 //  BookstoreApp
 //
 //  Created by Nikita on 04.12.2023.
@@ -7,12 +7,15 @@
 
 import UIKit
 
-class ScreenProductViewController: UIViewController {
+class ProductViewController: UIViewController {
 
     //MARK: - UI Elements
 
     private lazy var bookNameLabel = UILabel(text: "The Picture of Dorian Gray", font: .boldSystemFont(ofSize: 24), textColor: .black)
     private lazy var descriptionLabel = UILabel(text: "Description:", font: .systemFont(ofSize: 14), textColor: .black)
+    private lazy var authorLabel = CustomAttributedLabel(text: "Author: ", boldText: "Oscar Wilde")
+    private lazy var categoryLabel = CustomAttributedLabel(text: "Category: ", boldText: "Classics")
+    private lazy var ratingLabel = CustomAttributedLabel(text: "Rating: ", boldText: "4.11/5")
     
     private lazy var bookPicture: UIImageView = {
         let image = UIImageView()
@@ -29,55 +32,7 @@ class ScreenProductViewController: UIViewController {
         stack.alignment = .leading
         return stack
     }()
-    
-    private lazy var authorLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 14)
-        
-        let text = "Author: "
-        let normalString = NSMutableAttributedString(string: text)
-        
-        let boldText = "Oscar Wilde"
-        let bold = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
-        let atributed = NSMutableAttributedString(string: boldText, attributes: bold)
-        normalString.append(atributed)
-        label.attributedText = normalString
-        return label
-    }()
-    
-    private lazy var categoryLable: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 14)
-        
-        let text = "Category: "
-        let normalString = NSMutableAttributedString(string: text)
-        
-        let boldText = "Classics"
-        let bold = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
-        let atributed = NSMutableAttributedString(string: boldText, attributes: bold)
-        normalString.append(atributed)
-        label.attributedText = normalString
-        return label
-    }()
-    
-    private lazy var ratingLable: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 14)
-        
-        let text = "Rating: "
-        let normalString = NSMutableAttributedString(string: text)
-        
-        let boldText = "4.11/5"
-        let bold = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
-        let atributed = NSMutableAttributedString(string: boldText, attributes: bold)
-        normalString.append(atributed)
-        label.attributedText = normalString
-        return label
-    }()
-    
+
     private lazy var addToListbutton = UIButton(title: "Add to list", titleColor: .black, backgroundColor: .gray, cornerRadius: 4, font: .systemFont(ofSize: 14))
     private lazy var readButton = UIButton(title: "Read", titleColor: .white, backgroundColor: .black, cornerRadius: 4, font: .systemFont(ofSize: 14))
     
@@ -108,7 +63,7 @@ class ScreenProductViewController: UIViewController {
         // Swtup view
         view.backgroundColor = .white
         view.addSubviews(bookNameLabel, bookPicture, bookInformationStack, descriptionLabel, addToListbutton, readButton, descriptionTextView)
-        bookInformationStack.addArrangedSubviews(authorLabel, categoryLable, ratingLable)
+        bookInformationStack.addArrangedSubviews(authorLabel, categoryLabel, ratingLabel)
         bookPicture.dropShadow()
         
         // Setup navigation bar
@@ -136,7 +91,7 @@ class ScreenProductViewController: UIViewController {
 
 //MARK: - Extension
 
-extension ScreenProductViewController {
+extension ProductViewController {
     
     ///Setup constraints for ui elements
     func setupConstraints() {

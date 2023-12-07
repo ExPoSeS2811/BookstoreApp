@@ -25,6 +25,7 @@ extension UIView {
 }
 
 extension UIView {
+    
     static var safeAreaInset: UIEdgeInsets {
         if #available(iOS 11.0, *), let keyWindow = UIApplication.shared.keyWindow {
             return keyWindow.safeAreaInsets
