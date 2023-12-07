@@ -17,12 +17,14 @@ class LikesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Call function's
         setupView()
         setupConstraints()
     }
     
     //MARK: - Private methods
-    
+    /// Setup view method
     private func setupView() {
     
         // Setup view
@@ -39,8 +41,16 @@ class LikesViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
+
 extension LikesViewController {
     
+    /// Numbers for constraints
+    private enum Constants {
+        static let twentyPoints: CGFloat = 20
+    }
+    
+    ///Setup constraints for ui elements
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
@@ -48,7 +58,7 @@ extension LikesViewController {
             likeCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             likeCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             likeCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            likeCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20),
+            likeCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Constants.twentyPoints),
         ])
     }
 }

@@ -9,10 +9,14 @@ import UIKit
 
 class LikesCollectionView: UICollectionView {
     
+    //MARK: - Initialize
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         super.init(frame: .zero, collectionViewLayout: layout)
+        
+        // Call function's
         setupCollection()
     }
     
@@ -20,27 +24,24 @@ class LikesCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Private methods
+    /// Setup collection method
     private func setupCollection() {
         register(LikesCollectionViewCell.self, forCellWithReuseIdentifier: LikesCollectionViewCell.reuseID)
         delegate = self
         dataSource = self
         showsHorizontalScrollIndicator = false
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
+
+//MARK: - Extension
 
 extension LikesCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    //MARK: Collection view data source, delegate and flow Layout methods
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

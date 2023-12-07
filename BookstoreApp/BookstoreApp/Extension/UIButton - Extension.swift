@@ -9,7 +9,7 @@ import UIKit
 
 extension UIButton {
     
-    convenience init(textStyle: ButtonTextStyle = .defaultTextStyle, backgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle) {
+    convenience init(textStyle: ButtonTextStyle = .defaultTextStyle, backgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle, backgroundImage: ButtonBackgroundImage = .defaultBackgroundImage) {
         self.init(type: .system)
         self.frame = .infinite
         self.tintColor = .white
@@ -32,6 +32,14 @@ extension UIButton {
         
         if let font = textStyle.font {
             self.titleLabel?.font = font
+        }
+        
+        if let image = backgroundImage.image {
+            self.setImage(image, for: .normal)
+        }
+        
+        if let tintColor = backgroundImage.tintColor {
+            self.tintColor = tintColor
         }
     }
 }

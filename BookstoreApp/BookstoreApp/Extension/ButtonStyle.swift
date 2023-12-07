@@ -24,3 +24,10 @@ struct ButtonBackgroundStyle {
     var backgroundColor: UIColor?
     var cornerRadius: CGFloat?
 }
+
+struct ButtonBackgroundImage {
+    static let defaultBackgroundImage = ButtonBackgroundImage()
+    
+    var image: UIImage?
+    var tintColor: UIColor?
+}
