@@ -32,7 +32,7 @@ class TabBarController: UITabBarController {
                 image: UIImage(systemName: "heart.fill")
             ),
             setupNavigationController(
-                rootViewController: HomeViewController(),
+                rootViewController: AccountViewController(),
                 title: "Account",
                 image: UIImage(systemName: "person.crop.circle.fill")
             )
