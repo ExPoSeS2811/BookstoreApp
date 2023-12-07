@@ -4,6 +4,7 @@ class HomeViewController: UIViewController {
     private var books = [Books]()
     private var generator = URLRequestGeneratore()
     private var networkSevice = NetworkManager()
+    
     private lazy var categoryCollectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout(width: Constants.categoryWidth, height: Constants.categoryHeight))
         cv.backgroundColor = .clear
@@ -11,7 +12,7 @@ class HomeViewController: UIViewController {
         cv.register(HomeCategoryCollectionViewCell.self, forCellWithReuseIdentifier: HomeCategoryCollectionViewCell.identifier)
         return cv
     }()
-
+    
     private lazy var topBooksCollectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout(width: Constants.booksWidth, height: Constants.booksHeight))
         cv.backgroundColor = .clear
@@ -54,6 +55,7 @@ class HomeViewController: UIViewController {
             dispatchGroup.leave()
         }
     }
+    
     
     private func setupFlowLayout(width: CGFloat, height: CGFloat) -> UICollectionViewFlowLayout {
         let flow = UICollectionViewFlowLayout()
@@ -129,6 +131,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+
 private extension HomeViewController {
     enum Constants {
         static let categoryHeight: CGFloat = 40
@@ -137,3 +140,4 @@ private extension HomeViewController {
         static let booksWidth: CGFloat = 176
     }
 }
+

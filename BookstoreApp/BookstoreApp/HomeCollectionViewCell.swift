@@ -1,9 +1,9 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
+    static let identifier = "HomeCollectionViewCell"
     let generator = URLRequestGeneratore()
     let networkService = NetworkManager()
-    static let identifier = "HomeCollectionViewCell"
     private lazy var bookImage: UIImageView = {
         let image = UIImageView(image: UIImage(named: "DorianGray"))
         image.contentMode = .scaleAspectFill
@@ -49,7 +49,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
+        
     override func prepareForReuse() {
         super.prepareForReuse()
         bookImage.image = nil
