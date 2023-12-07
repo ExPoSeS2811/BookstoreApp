@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
         self.viewControllers = [
             setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .house),
             setupTabBarСontroller(vc: ScreenCategoriesViewController(), tabBarItems: .categories),
-            setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .likes),
+            setupTabBarСontroller(vc: LikesViewController(), tabBarItems: .likes),
             setupTabBarСontroller(vc: HomeViewController(), tabBarItems: .account)
         ]
     }

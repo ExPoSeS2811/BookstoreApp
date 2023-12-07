@@ -9,42 +9,37 @@ import UIKit
 
 extension UIButton {
     
-    convenience init(title: String? = nil, titleColor: UIColor? = nil, backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = 0, borderWidth: CGFloat? = nil, borderColor: UIColor? = nil, image: String? = nil, font: UIFont? = nil) {
+    convenience init(textStyle: ButtonTextStyle = .defaultTextStyle, backgroundStyle: ButtonBackgroundStyle = .defaultBackgroundStyle, backgroundImage: ButtonBackgroundImage = .defaultBackgroundImage) {
         self.init(type: .system)
         self.frame = .infinite
         self.tintColor = .white
         
-        if let title = title {
-            self.setTitle(title, for: .normal)
+        if textStyle.title != nil {
+            self.setTitle(textStyle.title, for: .normal)
         }
         
-        if let titleColor = titleColor {
+        if let titleColor = textStyle.titleColor {
             self.setTitleColor(titleColor, for: .normal)
         }
         
-        if let color = backgroundColor {
+        if let color = backgroundStyle.backgroundColor {
             self.backgroundColor = color
         }
         
-        if let radius = cornerRadius {
+        if let radius = backgroundStyle.cornerRadius {
             self.layer.cornerRadius = radius
         }
         
-        if let borderWidth = borderWidth {
-            self.layer.borderWidth = borderWidth
-        }
-        
-        if let borderColor = borderColor {
-            self.layer.borderColor = borderColor.cgColor
-        }
-        
-        if let image = image {
-            let uiImage = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
-            self.setImage(uiImage, for: .normal)
-        }
-        
-        if let font = font {
+        if let font = textStyle.font {
             self.titleLabel?.font = font
+        }
+        
+        if let image = backgroundImage.image {
+            self.setImage(image, for: .normal)
+        }
+        
+        if let tintColor = backgroundImage.tintColor {
+            self.tintColor = tintColor
         }
     }
 }
