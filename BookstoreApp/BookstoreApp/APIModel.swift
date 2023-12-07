@@ -109,32 +109,32 @@ func searchBooksByAuthor(authorQuery: String, completion: @escaping (Result<[Aut
     }.resume()
 }
 
-// Примеры использования функций поиска книг и поиска книг по автору
-searchBooks(query: "The Lord of the Rings") { result in
-    switch result {
-    case .success(let books):
-        for book in books {
-            print("Title: \(book.title)")
-            print("Author: \(book.authorName.joined(separator: ", "))")
-            print("Year: \(book.firstPublishYear)")
-            print("-----")
-        }
-    case .failure(let error):
-        print("Error: \(error)")
-    }
-}
-
-searchBooksByAuthor(authorQuery: "J. K. Rowling") { result in
-    switch result {
-    case .success(let authors):
-        for author in authors {
-            print("Author Name: \(author.name)")
-            print("Birth Date: \(author.birthDate)")
-            print("Top Work: \(author.topWork)")
-            print("Work Count: \(author.workCount)")
-            print("-----")
-        }
-    case .failure(let error):
-        print("Error: \(error)")
-    }
-}
+//// Примеры использования функций поиска книг и поиска книг по автору
+//searchBooks(query: "The Lord of the Rings") { result in
+//    switch result {
+//    case .success(let books):
+//        for book in books {
+//            print("Title: \(book.title)")
+//            print("Author: \(book.authorName.joined(separator: ", "))")
+//            print("Year: \(book.firstPublishYear)")
+//            print("-----")
+//        }
+//    case .failure(let error):
+//        print("Error: \(error)")
+//    }
+//}
+//
+//searchBooksByAuthor(authorQuery: "J. K. Rowling") { result in
+//    switch result {
+//    case .success(let authors):
+//        for author in authors {
+//            print("Author Name: \(author.name)")
+//            print("Birth Date: \(author.birthDate)")
+//            print("Top Work: \(author.topWork)")
+//            print("Work Count: \(author.workCount)")
+//            print("-----")
+//        }
+//    case .failure(let error):
+//        print("Error: \(error)")
+//    }
+//}
