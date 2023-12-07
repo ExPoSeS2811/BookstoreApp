@@ -1,6 +1,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    private var books = [Books]()
+    private var generator = URLRequestGeneratore()
+    private var networkSevice = NetworkManager()
     private lazy var categoryCollectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout(width: Constants.categoryWidth, height: Constants.categoryHeight))
         cv.backgroundColor = .clear
@@ -33,6 +36,23 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        let requestBooks = generator.request(endpoint: "search.json", queryItems: [URLQueryItem(name: "q", value: "popular")])
+        networkSevice.request(generator: requestBooks) { (result: Result<BookModel, Error>) in
+            switch result {
+            case .success(let success):
+                self.books = success.docs
+                self.topBooksCollectionView.reloadData()
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+            dispatchGroup.leave()
+        }
     }
     
     private func setupFlowLayout(width: CGFloat, height: CGFloat) -> UICollectionViewFlowLayout {
@@ -78,10 +98,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-            case categoryCollectionView: return 3
-            case topBooksCollectionView: return 20
-            case recentBooksCollectionView: return 20
-            default: return 0
+        case categoryCollectionView: return 3
+        case topBooksCollectionView: return books.count
+        case recentBooksCollectionView: return 20
+        default: return 0
         }
     }
     
@@ -97,6 +117,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.configureCell(with: books[indexPath.row])
             return cell
         case recentBooksCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
@@ -107,7 +128,6 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
 }
-
 
 private extension HomeViewController {
     enum Constants {

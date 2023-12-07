@@ -22,6 +22,7 @@
 		404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605FD2B2106D300004BFB /* TapBarItems.swift */; };
 		404606082B2260F800004BFB /* PopularBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404606072B2260F800004BFB /* PopularBooks.swift */; };
 		4046060B2B22663B00004BFB /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046060A2B22663B00004BFB /* URLGenerator.swift */; };
+		4046060D2B22684400004BFB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046060C2B22684400004BFB /* NetworkService.swift */; };
 		7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */; };
 		7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */; };
 		7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF2D772B21FCF10040D511 /* APIModel.swift */; };
@@ -50,6 +51,7 @@
 		404605FD2B2106D300004BFB /* TapBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarItems.swift; sourceTree = "<group>"; };
 		404606072B2260F800004BFB /* PopularBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularBooks.swift; sourceTree = "<group>"; };
 		4046060A2B22663B00004BFB /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
+		4046060C2B22684400004BFB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCategoriesViewController.swift; sourceTree = "<group>"; };
 		7BFF2D772B21FCF10040D511 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				404606072B2260F800004BFB /* PopularBooks.swift */,
+				4046060C2B22684400004BFB /* NetworkService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				CAC4DD592B1CA3CE0051A325 /* HomeViewController.swift in Sources */,
 				7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */,
 				CAEBC98E2B1FD72000C68B53 /* TabBar.swift in Sources */,
+				4046060D2B22684400004BFB /* NetworkService.swift in Sources */,
 				7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */,
 				1E2E38562B2224DD003A2072 /* LikesCollectionView.swift in Sources */,
 				1E2E384D2B221956003A2072 /* CustomAtributedLabel.swift in Sources */,

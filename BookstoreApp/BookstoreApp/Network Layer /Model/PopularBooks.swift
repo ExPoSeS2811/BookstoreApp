@@ -1,10 +1,11 @@
 import Foundation
 
-struct Welcome: Codable {
-    let docs: [Doc]
+struct BookModel: Codable {
+    let docs: [Books]
 }
 
-struct Doc: Codable {
+struct Books: Codable {
+    let coverEditionKey: String?
     let title: String
     let publishYear: [Int]?
     let numberOfPagesMedian: Int?
@@ -16,6 +17,7 @@ struct Doc: Codable {
     let subtitle: String?
 
     enum CodingKeys: String, CodingKey {
+        case coverEditionKey = "cover_edition_key"
         case title
         case publishYear = "publish_year"
         case numberOfPagesMedian = "number_of_pages_median"
