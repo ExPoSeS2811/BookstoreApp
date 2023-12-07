@@ -20,6 +20,8 @@
 		404605F92B20602900004BFB /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605F82B20602900004BFB /* HomeCollectionViewCell.swift */; };
 		404605FC2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605FB2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift */; };
 		404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404605FD2B2106D300004BFB /* TapBarItems.swift */; };
+		404606082B2260F800004BFB /* PopularBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404606072B2260F800004BFB /* PopularBooks.swift */; };
+		4046060B2B22663B00004BFB /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046060A2B22663B00004BFB /* URLGenerator.swift */; };
 		7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */; };
 		7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */; };
 		7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF2D772B21FCF10040D511 /* APIModel.swift */; };
@@ -46,6 +48,8 @@
 		404605F82B20602900004BFB /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		404605FB2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		404605FD2B2106D300004BFB /* TapBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarItems.swift; sourceTree = "<group>"; };
+		404606072B2260F800004BFB /* PopularBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularBooks.swift; sourceTree = "<group>"; };
+		4046060A2B22663B00004BFB /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
 		7B1CBB3C2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BB90EE72B1F8C3500661D67 /* ScreenCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCategoriesViewController.swift; sourceTree = "<group>"; };
 		7BFF2D772B21FCF10040D511 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		CAC4DD582B1CA3CE0051A325 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CAC4DD5D2B1CA3D00051A325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAC4DD602B1CA3D00051A325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAC4DD622B1CA3D00051A325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC4DD682B1CAE3D0051A325 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CAEBC98B2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewLayout.swift; sourceTree = "<group>"; };
 		CAEBC98D2B1FD72000C68B53 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -81,6 +86,23 @@
 				1E2E38572B223A77003A2072 /* ButtonStyle.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		404606062B22609600004BFB /* Network Layer  */ = {
+			isa = PBXGroup;
+			children = (
+				404606092B22610200004BFB /* Model */,
+				4046060A2B22663B00004BFB /* URLGenerator.swift */,
+			);
+			path = "Network Layer ";
+			sourceTree = "<group>";
+		};
+		404606092B22610200004BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				404606072B2260F800004BFB /* PopularBooks.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1E2E38492B2214ED003A2072 /* ProductViewController */ = {
@@ -169,6 +191,7 @@
 			children = (
 				1E2E38502B221B8A003A2072 /* Aplication */,
 				1E2E38522B221BCB003A2072 /* CustomTabBar */,
+				404606062B22609600004BFB /* Network Layer  */,
 				1E0EE65F2B1E55DB0051C19C /* Extension */,
 				1E2E384A2B221531003A2072 /* HomeViewController */,
 				1E2E384B2B2215A8003A2072 /* LikesViewController */,
@@ -264,6 +287,7 @@
 				1E2E38562B2224DD003A2072 /* LikesCollectionView.swift in Sources */,
 				1E2E384D2B221956003A2072 /* CustomAtributedLabel.swift in Sources */,
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,
+				4046060B2B22663B00004BFB /* URLGenerator.swift in Sources */,
 				404605F92B20602900004BFB /* HomeCollectionViewCell.swift in Sources */,
 				CAC4DD692B1CAE3D0051A325 /* TabBarViewController.swift in Sources */,
 				404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */,
@@ -276,6 +300,7 @@
 				1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */,
 				1E2E38542B222125003A2072 /* LikesCollectionViewCell.swift in Sources */,
 				404605FC2B206DA400004BFB /* HomeCategoryCollectionViewCell.swift in Sources */,
+				404606082B2260F800004BFB /* PopularBooks.swift in Sources */,
 				CAEBC98C2B1FC8EF00C68B53 /* CategoryCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
