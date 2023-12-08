@@ -17,6 +17,8 @@
 		1E2E38542B222125003A2072 /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E38532B222125003A2072 /* LikesCollectionViewCell.swift */; };
 		1E2E38562B2224DD003A2072 /* LikesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E38552B2224DD003A2072 /* LikesCollectionView.swift */; };
 		1E2E38582B223A77003A2072 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E38572B223A77003A2072 /* ButtonStyle.swift */; };
+		1E3815232B23642D007EA57E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3815222B23642D007EA57E /* ListViewController.swift */; };
+		1E3815252B2364DF007EA57E /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3815242B2364DF007EA57E /* CustomListView.swift */; };
 		404090772B2281810028F9DC /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */; };
 		404090792B22819C0028F9DC /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */; };
 		4040907B2B2281AB0028F9DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040907A2B2281AB0028F9DC /* HomeViewController.swift */; };
@@ -46,6 +48,8 @@
 		1E2E38532B222125003A2072 /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E2E38552B2224DD003A2072 /* LikesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionView.swift; sourceTree = "<group>"; };
 		1E2E38572B223A77003A2072 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		1E3815222B23642D007EA57E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1E3815242B2364DF007EA57E /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
 		404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4040907A2B2281AB0028F9DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,15 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
+		1E3815212B2363D9007EA57E /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1E3815222B23642D007EA57E /* ListViewController.swift */,
+				1E3815242B2364DF007EA57E /* CustomListView.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
 		404606062B22609600004BFB /* Network Layer  */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 		CAC4DD532B1CA3CE0051A325 /* BookstoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E3815212B2363D9007EA57E /* ListViewController */,
 				1E2E38502B221B8A003A2072 /* Aplication */,
 				1E2E38522B221BCB003A2072 /* CustomTabBar */,
 				404606062B22609600004BFB /* Network Layer  */,
@@ -285,6 +299,7 @@
 				7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */,
 				1E2E38562B2224DD003A2072 /* LikesCollectionView.swift in Sources */,
 				1E2E384D2B221956003A2072 /* CustomAtributedLabel.swift in Sources */,
+				1E3815232B23642D007EA57E /* ListViewController.swift in Sources */,
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,
 				4046060B2B22663B00004BFB /* URLGenerator.swift in Sources */,
 				404090772B2281810028F9DC /* HomeCategoryCollectionViewCell.swift in Sources */,
@@ -293,6 +308,7 @@
 				404605FE2B2106D300004BFB /* TapBarItems.swift in Sources */,
 				1E0EE6562B1E25F10051C19C /* UIVIew - Extension.swift in Sources */,
 				1E2E384F2B221B4A003A2072 /* LikesViewController.swift in Sources */,
+				1E3815252B2364DF007EA57E /* CustomListView.swift in Sources */,
 				1E0EE65E2B1E3A620051C19C /* UILabel - Extension.swift in Sources */,
 				1E2E38582B223A77003A2072 /* ButtonStyle.swift in Sources */,
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
