@@ -19,7 +19,7 @@ class LikesCollectionViewCell: UICollectionViewCell {
     let categoryCellLabel = UILabel(text: "Classic", font: .systemFont(ofSize: 10), textColor: .white)
     let bookCellLabel = UILabel(text: "The Picture of Dorian Gray", font: .systemFont(ofSize: 14), textColor: .white)
     let authorCellLabel = UILabel(text: "Oscar Wilde", font: .systemFont(ofSize: 10), textColor: .white)
-    let deleteButton = UIButton()
+    let deleteButton = UIButton(tintColor: .white, image: "xmark")
     
     //MARK: - Initialize
     
@@ -45,15 +45,16 @@ class LikesCollectionViewCell: UICollectionViewCell {
         
         // Cell view
         cellView.dropShadow()
-        cellView.addSubviews(bookImage, labelsStack, deleteButton)
+        contentView.addSubviews(deleteButton)
+        cellView.addSubviews(bookImage, labelsStack)
         labelsStack.addArrangedSubviews(categoryCellLabel, bookCellLabel, authorCellLabel)
         bookImage.image = UIImage(named: "DorianGray")
         bookImage.contentMode = .scaleToFill
-        deleteButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
     
-    func addTargets(target: Any, selector: Selector) {
-        deleteButton.addTarget(target, action: selector, for: .touchUpInside)
+    @objc func deleteButtonTapped() {
+        print("Click")
     }
 }
 
@@ -78,7 +79,7 @@ extension LikesCollectionViewCell {
             // Cell view
             cellView.topAnchor.constraint(equalTo: contentView.topAnchor),
             cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constants.twentyPoints),
             cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             // Image view
@@ -93,8 +94,8 @@ extension LikesCollectionViewCell {
             labelsStack.widthAnchor.constraint(equalToConstant: Constants.labelsStackWidht),
             
             // Delete button
-            deleteButton.topAnchor.constraint(equalTo: cellView.topAnchor, constant: Constants.tenPoints),
-            deleteButton.leadingAnchor.constraint(equalTo: labelsStack.trailingAnchor),
+            deleteButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.tenPoints),
+            deleteButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constants.tenPoints),
             deleteButton.widthAnchor.constraint(equalToConstant: Constants.buttonHeightWidth),
             deleteButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeightWidth),
         ])

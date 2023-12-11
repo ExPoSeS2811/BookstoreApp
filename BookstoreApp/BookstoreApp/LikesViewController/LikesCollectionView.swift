@@ -38,10 +38,6 @@ class LikesCollectionView: UICollectionView {
         showsHorizontalScrollIndicator = false
         books = realm.objects(LikeBook.self)
     }
-    
-    @objc func deleteButtonTapped(complitionHandler: @escaping ()-> Void) {
-        
-    }
 }
 
 //MARK: - Extension
@@ -62,11 +58,6 @@ extension LikesCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
         cell.categoryCellLabel.text = books[indexPath.row].category
         let imageForCell = books[indexPath.row].bookImage
         cell.bookImage.image = UIImage(data: imageForCell)
-        cell.addTargets(target: self, selector: #selector(deleteButtonTapped { [self] in
-            let book = books[indexPath.row]
-            StorageManager.removeObject(book: book)
-            self.deleteItems(at: books)
-        }))
         reloadData()
         return cell
     }
