@@ -22,6 +22,7 @@
 		1E6D51452B275CC2009718C4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51442B275CC2009718C4 /* Realm */; };
 		1E6D51472B275CC2009718C4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51462B275CC2009718C4 /* RealmSwift */; };
 		1E6D514A2B275F20009718C4 /* LikeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D51492B275F20009718C4 /* LikeBook.swift */; };
+		1E6D514C2B2760F4009718C4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D514B2B2760F4009718C4 /* StorageManager.swift */; };
 		404090772B2281810028F9DC /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */; };
 		404090792B22819C0028F9DC /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */; };
 		4040907B2B2281AB0028F9DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040907A2B2281AB0028F9DC /* HomeViewController.swift */; };
@@ -54,6 +55,7 @@
 		1E3815222B23642D007EA57E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1E3815242B2364DF007EA57E /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
 		1E6D51492B275F20009718C4 /* LikeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBook.swift; sourceTree = "<group>"; };
+		1E6D514B2B2760F4009718C4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4040907A2B2281AB0028F9DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6D51492B275F20009718C4 /* LikeBook.swift */,
+				1E6D514B2B2760F4009718C4 /* StorageManager.swift */,
 			);
 			path = RealmDataBase;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				1E0EE6542B1E213E0051C19C /* ProductViewController.swift in Sources */,
 				7B1CBB3D2B1FB3380008D8E1 /* CategoryCollectionViewCell.swift in Sources */,
 				404090792B22819C0028F9DC /* HomeCollectionViewCell.swift in Sources */,
+				1E6D514C2B2760F4009718C4 /* StorageManager.swift in Sources */,
 				CAEBC98E2B1FD72000C68B53 /* TabBar.swift in Sources */,
 				4046060D2B22684400004BFB /* NetworkService.swift in Sources */,
 				7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */,
