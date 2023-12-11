@@ -14,13 +14,12 @@ class LikesCollectionViewCell: UICollectionViewCell {
     //MARK: - User elements
     
     private lazy var cellView = UIView()
-    private lazy var bookImage = UIImageView()
-    private lazy var labelsStack = UIStackView(axis: .vertical)
-    private lazy var categoryCellLabel = UILabel(text: "Classic", font: .systemFont(ofSize: 10), textColor: .white)
-    private lazy var bookCellLabel = UILabel(text: "The Picture of Dorian Gray", font: .systemFont(ofSize: 14), textColor: .white)
-    private lazy var authorCellLabel = UILabel(text: "Oscar Wilde", font: .systemFont(ofSize: 10), textColor: .white)
-    private let deleteButtonImage = ButtonBackgroundImage(image: UIImage(systemName: "xmark"), tintColor: .white)
-    private lazy var deleteButton = UIButton(backgroundImage: deleteButtonImage)
+    let bookImage = UIImageView()
+    let labelsStack = UIStackView(axis: .vertical)
+    let categoryCellLabel = UILabel(text: "Classic", font: .systemFont(ofSize: 10), textColor: .white)
+    let bookCellLabel = UILabel(text: "The Picture of Dorian Gray", font: .systemFont(ofSize: 14), textColor: .white)
+    let authorCellLabel = UILabel(text: "Oscar Wilde", font: .systemFont(ofSize: 10), textColor: .white)
+    let deleteButton = UIButton()
     
     //MARK: - Initialize
     
@@ -50,6 +49,11 @@ class LikesCollectionViewCell: UICollectionViewCell {
         labelsStack.addArrangedSubviews(categoryCellLabel, bookCellLabel, authorCellLabel)
         bookImage.image = UIImage(named: "DorianGray")
         bookImage.contentMode = .scaleToFill
+        deleteButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+    }
+    
+    func addTargets(target: Any, selector: Selector) {
+        deleteButton.addTarget(target, action: selector, for: .touchUpInside)
     }
 }
 

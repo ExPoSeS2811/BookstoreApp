@@ -24,4 +24,5 @@ class LikeBook: Object {
         self.bookImage = bookImage
     }
     
+
 }

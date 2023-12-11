@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LikesViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class LikesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Call function's
         setupView()

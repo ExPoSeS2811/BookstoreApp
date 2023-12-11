@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LikesCollectionView: UICollectionView {
+    
+    //MARK: - Properties
+    
+    private var books: Results<LikeBook>!
     
     //MARK: - Initialize
     
@@ -31,6 +36,11 @@ class LikesCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         showsHorizontalScrollIndicator = false
+        books = realm.objects(LikeBook.self)
+    }
+    
+    @objc func deleteButtonTapped(complitionHandler: @escaping ()-> Void) {
+        
     }
 }
 
@@ -41,12 +51,23 @@ extension LikesCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
     //MARK: Collection view data source, delegate and flow Layout methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseID, for: indexPath)
+        let cell = dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseID, for: indexPath) as! LikesCollectionViewCell
         cell.layer.cornerRadius = 8
+        cell.authorCellLabel.text = books[indexPath.row].author
+        cell.bookCellLabel.text = books[indexPath.row].book
+        cell.categoryCellLabel.text = books[indexPath.row].category
+        let imageForCell = books[indexPath.row].bookImage
+        cell.bookImage.image = UIImage(data: imageForCell)
+        cell.addTargets(target: self, selector: #selector(deleteButtonTapped { [self] in
+            let book = books[indexPath.row]
+            StorageManager.removeObject(book: book)
+            self.deleteItems(at: books)
+        }))
+        reloadData()
         return cell
     }
     

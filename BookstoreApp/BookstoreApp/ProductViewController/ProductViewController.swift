@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ProductViewController: UIViewController {
+    
+    //MARK: - Properties
+
+    let storageManager = StorageManager()
 
     //MARK: - UI Elements
 
@@ -59,6 +64,7 @@ class ProductViewController: UIViewController {
         // Call function's
         setupView()
         setupConstraints()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     //MARK: - Private methods
@@ -86,7 +92,13 @@ class ProductViewController: UIViewController {
     
     /// Action for like button
     @objc func likeButtonTapped() {
+        guard let author = authorLabel.text else { return }
+        guard let book = bookNameLabel.text else { return }
+        guard let category = categoryLabel.text else { return }
+        guard let bookImage = bookPicture.image?.pngData() else { return }
+        let saveBook = LikeBook(author: author, book: book, category: category, bookImage: bookImage)
         
+        StorageManager.saveObject(book: saveBook)
     }
     
     /// Go back for left bar button item
