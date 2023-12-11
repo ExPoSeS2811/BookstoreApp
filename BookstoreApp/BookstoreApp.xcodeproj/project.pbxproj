@@ -21,6 +21,7 @@
 		1E3815252B2364DF007EA57E /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3815242B2364DF007EA57E /* CustomListView.swift */; };
 		1E6D51452B275CC2009718C4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51442B275CC2009718C4 /* Realm */; };
 		1E6D51472B275CC2009718C4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51462B275CC2009718C4 /* RealmSwift */; };
+		1E6D514A2B275F20009718C4 /* LikeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D51492B275F20009718C4 /* LikeBook.swift */; };
 		404090772B2281810028F9DC /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */; };
 		404090792B22819C0028F9DC /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */; };
 		4040907B2B2281AB0028F9DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040907A2B2281AB0028F9DC /* HomeViewController.swift */; };
@@ -52,6 +53,7 @@
 		1E2E38572B223A77003A2072 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		1E3815222B23642D007EA57E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1E3815242B2364DF007EA57E /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		1E6D51492B275F20009718C4 /* LikeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBook.swift; sourceTree = "<group>"; };
 		404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		404090782B22819C0028F9DC /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4040907A2B2281AB0028F9DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 			path = ListViewController;
 			sourceTree = "<group>";
 		};
+		1E6D51482B275F06009718C4 /* RealmDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				1E6D51492B275F20009718C4 /* LikeBook.swift */,
+			);
+			path = RealmDataBase;
+			sourceTree = "<group>";
+		};
 		404606062B22609600004BFB /* Network Layer  */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		CAC4DD532B1CA3CE0051A325 /* BookstoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E6D51482B275F06009718C4 /* RealmDataBase */,
 				1E3815212B2363D9007EA57E /* ListViewController */,
 				1E2E38502B221B8A003A2072 /* Aplication */,
 				1E2E38522B221BCB003A2072 /* CustomTabBar */,
@@ -323,6 +334,7 @@
 				1E0EE65E2B1E3A620051C19C /* UILabel - Extension.swift in Sources */,
 				1E2E38582B223A77003A2072 /* ButtonStyle.swift in Sources */,
 				CAC4DD552B1CA3CE0051A325 /* AppDelegate.swift in Sources */,
+				1E6D514A2B275F20009718C4 /* LikeBook.swift in Sources */,
 				7BB90EE82B1F8C3500661D67 /* ScreenCategoriesViewController.swift in Sources */,
 				1E0EE65A2B1E2E5B0051C19C /* UIStackView - Extension.swift in Sources */,
 				1E2E38542B222125003A2072 /* LikesCollectionViewCell.swift in Sources */,

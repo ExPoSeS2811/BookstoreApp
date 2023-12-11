@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -6,8 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
         
+        window = UIWindow(frame: UIScreen.main.bounds)
         if let window {
             let tapBar = TabBar()      
             let tabBarController = TabBarController(tabBar: tapBar)
@@ -15,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = tabBarController
             window.makeKeyAndVisible()
         }
+        
+        let schemeVersion: UInt64 = 1
+        let config = Realm.Configuration(
+            schemaVersion: schemeVersion) { migration, oldSchemaVersion in
+                if (oldSchemaVersion < schemeVersion) {
+                }
+            }
+        Realm.Configuration.defaultConfiguration = config
+        
         return true
     }
 }
