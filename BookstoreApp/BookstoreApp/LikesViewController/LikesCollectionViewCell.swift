@@ -29,6 +29,7 @@ class LikesCollectionViewCell: UICollectionViewCell {
         // Call function's
         setupCell()
         setupConstraints()
+        self.layer.cornerRadius = 8
     }
     
     required init?(coder: NSCoder) {
@@ -50,11 +51,14 @@ class LikesCollectionViewCell: UICollectionViewCell {
         labelsStack.addArrangedSubviews(categoryCellLabel, bookCellLabel, authorCellLabel)
         bookImage.image = UIImage(named: "DorianGray")
         bookImage.contentMode = .scaleToFill
-        deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
     
-    @objc func deleteButtonTapped() {
-        print("Click")
+   public func configureCell(with model: LikeBook) {
+        authorCellLabel.text = model.author
+        bookCellLabel.text = model.book
+        categoryCellLabel.text = model.category
+        let imageForCell = model.bookImage
+        bookImage.image = UIImage(data: imageForCell)
     }
 }
 

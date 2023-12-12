@@ -35,7 +35,9 @@ class LikesCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         showsHorizontalScrollIndicator = false
-        realmMethods.books = realm.objects(LikeBook.self)
+        let results = realm.objects(LikeBook.self)
+        realmMethods.books = Array(results)
+     
     }
 }
 
@@ -51,13 +53,7 @@ extension LikesCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseID, for: indexPath) as? LikesCollectionViewCell  else { return UICollectionViewCell() }
-        cell.layer.cornerRadius = 8
-        cell.authorCellLabel.text = realmMethods.books[indexPath.row].author
-        cell.bookCellLabel.text = realmMethods.books[indexPath.row].book
-        cell.categoryCellLabel.text = realmMethods.books[indexPath.row].category
-        let imageForCell = realmMethods.books[indexPath.row].bookImage
-        cell.bookImage.image = UIImage(data: imageForCell)
-        reloadData()
+        cell.configureCell(with: realmMethods.books[indexPath.row])
         return cell
     }
     

@@ -10,10 +10,10 @@ import RealmSwift
 
 class LikeBook: Object {
     
-    @objc dynamic var author: String?
-    @objc dynamic var book: String?
-    @objc dynamic var category: String?
-    @objc dynamic var bookImage = Data()
+    @Persisted var author: String?
+    @Persisted var book: String?
+    @Persisted var category: String?
+    @Persisted var bookImage = Data()
     
     
     convenience init(author: String, book: String, category: String, bookImage: Data) {

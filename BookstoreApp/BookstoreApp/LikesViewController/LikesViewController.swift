@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class LikesViewController: UIViewController {
     
@@ -15,6 +14,7 @@ class LikesViewController: UIViewController {
     private lazy var likeCollectionView = LikesCollectionView()
     
     //MARK: - Life cycle
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,11 @@ class LikesViewController: UIViewController {
         // Call function's
         setupView()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        likeCollectionView.reloadData()
     }
     
     //MARK: - Private methods

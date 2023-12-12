@@ -79,7 +79,7 @@ class ProductViewController: UIViewController {
         bookPicture.dropShadow()
         
         // Setup navigation bar
-        let likeButton = UIBarButtonItem(image: UIImage(systemName: "heart.fill"), style: .plain, target: self, action: #selector(likeButtonTapped))
+        let likeButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(likeButtonTapped))
         let backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(goBack))
         navigationItem.rightBarButtonItem = likeButton
         navigationItem.leftBarButtonItem = backButton

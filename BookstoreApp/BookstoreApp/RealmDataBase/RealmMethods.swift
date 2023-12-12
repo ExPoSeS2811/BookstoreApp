@@ -10,7 +10,7 @@ import RealmSwift
 
 class RealmMethods {
     
-    var books: Results<LikeBook>!
+    var books = [LikeBook]()
     
     func save(_ object: LikeBook) {
         StorageManager.saveObject(book: object)
