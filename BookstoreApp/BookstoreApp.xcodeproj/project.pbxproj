@@ -19,6 +19,7 @@
 		1E2E38582B223A77003A2072 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E38572B223A77003A2072 /* ButtonStyle.swift */; };
 		1E3815232B23642D007EA57E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3815222B23642D007EA57E /* ListViewController.swift */; };
 		1E3815252B2364DF007EA57E /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3815242B2364DF007EA57E /* CustomListView.swift */; };
+		1E3A9B272B28B9D4003213CD /* RealmMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A9B262B28B9D4003213CD /* RealmMethods.swift */; };
 		1E6D51452B275CC2009718C4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51442B275CC2009718C4 /* Realm */; };
 		1E6D51472B275CC2009718C4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6D51462B275CC2009718C4 /* RealmSwift */; };
 		1E6D514A2B275F20009718C4 /* LikeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D51492B275F20009718C4 /* LikeBook.swift */; };
@@ -54,6 +55,7 @@
 		1E2E38572B223A77003A2072 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		1E3815222B23642D007EA57E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1E3815242B2364DF007EA57E /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		1E3A9B262B28B9D4003213CD /* RealmMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMethods.swift; sourceTree = "<group>"; };
 		1E6D51492B275F20009718C4 /* LikeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBook.swift; sourceTree = "<group>"; };
 		1E6D514B2B2760F4009718C4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		404090762B2281810028F9DC /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				1E6D51492B275F20009718C4 /* LikeBook.swift */,
 				1E6D514B2B2760F4009718C4 /* StorageManager.swift */,
+				1E3A9B262B28B9D4003213CD /* RealmMethods.swift */,
 			);
 			path = RealmDataBase;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				4046060D2B22684400004BFB /* NetworkService.swift in Sources */,
 				7BFF2D782B21FCF10040D511 /* APIModel.swift in Sources */,
 				1E2E38562B2224DD003A2072 /* LikesCollectionView.swift in Sources */,
+				1E3A9B272B28B9D4003213CD /* RealmMethods.swift in Sources */,
 				1E2E384D2B221956003A2072 /* CustomAtributedLabel.swift in Sources */,
 				1E3815232B23642D007EA57E /* ListViewController.swift in Sources */,
 				1E0EE65C2B1E2E800051C19C /* UIButton - Extension.swift in Sources */,

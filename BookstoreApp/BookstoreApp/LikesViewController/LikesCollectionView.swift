@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import RealmSwift
 
 class LikesCollectionView: UICollectionView {
     
     //MARK: - Properties
     
-    private var books: Results<LikeBook>!
+    let realmMethods = RealmMethods()
     
     //MARK: - Initialize
     
@@ -36,7 +35,7 @@ class LikesCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         showsHorizontalScrollIndicator = false
-        books = realm.objects(LikeBook.self)
+        realmMethods.books = realm.objects(LikeBook.self)
     }
 }
 
@@ -47,16 +46,16 @@ extension LikesCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
     //MARK: Collection view data source, delegate and flow Layout methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        books.count
+        return realmMethods.books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseID, for: indexPath) as! LikesCollectionViewCell
+        guard let cell = dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseID, for: indexPath) as? LikesCollectionViewCell  else { return UICollectionViewCell() }
         cell.layer.cornerRadius = 8
-        cell.authorCellLabel.text = books[indexPath.row].author
-        cell.bookCellLabel.text = books[indexPath.row].book
-        cell.categoryCellLabel.text = books[indexPath.row].category
-        let imageForCell = books[indexPath.row].bookImage
+        cell.authorCellLabel.text = realmMethods.books[indexPath.row].author
+        cell.bookCellLabel.text = realmMethods.books[indexPath.row].book
+        cell.categoryCellLabel.text = realmMethods.books[indexPath.row].category
+        let imageForCell = realmMethods.books[indexPath.row].bookImage
         cell.bookImage.image = UIImage(data: imageForCell)
         reloadData()
         return cell
